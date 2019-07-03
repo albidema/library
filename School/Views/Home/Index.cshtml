@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "School";
+}
+
+<ui-view></ui-view>
+
+
+@section scripts {
+
+    @Scripts.Render("~/Scripts/angular.js")
+    @Scripts.Render("~/Scripts/angular-resource.js")
+    @Scripts.Render("~/Scripts/angular-ui-router.js")
+
+    @Scripts.Render("~/Scripts/App/controller.js")
+
+}
