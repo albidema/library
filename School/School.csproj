@@ -203,7 +203,10 @@
     <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\App\controller.js" />
+    <Content Include="App\controller.js" />
+    <Content Include="App\module.js" />
+    <Content Include="App\router.js" />
+    <Content Include="App\service.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
