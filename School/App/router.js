@@ -1,24 +1,68 @@
-﻿app.config(function ($stateProvider, $urlRouterProvider) {
+﻿(function () {
 
-    $stateProvider
+    angular.module("app")
+    .config(function ($stateProvider, $urlRouterProvider) {
 
-        .state("list", {
-            url: "/list",
-            templateUrl: "/ngView/list.html",
-            controller: "listCtrl"
-        })
-        .state("list.detail", {
-            url: "/detail/{id}",
-            templateUrl: "/ngView/detail.html",
-            controller: "detailCtrl"
-        })
-        .state("list.detail.form", {
-            url: "/form",
-            templateUrl: "/ngView/form.html",
-            controller: "formCtrl"
-        });
+        // For any unmatched url, redirect to /list
+        $urlRouterProvider.otherwise("/");
 
-    // For any unmatched url, redirect to /list
-    $urlRouterProvider.otherwise("/list");
+        $stateProvider
 
-});
+            .state("home", {
+                url: "/",
+                templateUrl: "app/books/list.html",
+                controller: "listCtrl"
+            })
+            .state("detail", {
+                url: "/detail/{id}",
+                templateUrl: "app/book/detail.html",
+                controller: "detailCtrl"
+            })
+            .state("edit", {
+                url: "/edit/{id}",
+                templateUrl: "app/book/edit.html",
+                controller: "editCtrl"
+            });
+            //.state("test", {
+            //    url: "/test",
+            //    templateUrl: "/ngView/test.html",
+            //    controller: "testCtrl"
+            //});
+
+
+
+    });
+
+})();
+
+//app.config(function ($stateProvider, $urlRouterProvider) {
+
+//    // For any unmatched url, redirect to /list
+//    $urlRouterProvider.otherwise("/");
+
+//    $stateProvider
+
+//        .state("home", {
+//            url: "/",
+//            templateUrl: "/ngView/list.html",
+//            controller: "listCtrl"
+//        })
+//        .state("detail", {
+//            url: "/detail/{id}",
+//            templateUrl: "/ngView/detail.html",
+//            controller: "detailCtrl"
+//        })
+//        .state("form", {
+//            url: "/form",
+//            templateUrl: "/ngView/form.html",
+//            controller: "formCtrl"
+//        })
+//            .state("test", {
+//                url: "/test",
+//                templateUrl: "/ngView/test.html",
+//                controller: "testCtrl"
+//            });
+
+
+
+//});

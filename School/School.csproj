@@ -185,15 +185,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\books\listCtrl.js" />
+    <Content Include="App\book\detailCtrl.js" />
+    <Content Include="App\book\editCtrl.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="ngView\form.html" />
-    <Content Include="ngView\detail.html" />
-    <Content Include="ngView\list.html" />
+    <Content Include="App\book\edit.html" />
+    <Content Include="App\book\detail.html" />
+    <Content Include="App\books\list.html" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
@@ -204,7 +207,7 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="App\controller.js" />
-    <Content Include="App\module.js" />
+    <Content Include="App\app.js" />
     <Content Include="App\router.js" />
     <Content Include="App\service.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -240,6 +243,7 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App\student\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
