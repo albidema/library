@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module("app", ["ngResource", "ui.router", /*'ngAnimate',*/ 'toastr']);
+    angular.module("app", ["ngResource", "ui.router", 'toastr', 'ui.select', 'ngSanitize']);
 
     angular.module("app").config(function (toastrConfig) {
         angular.extend(toastrConfig, {

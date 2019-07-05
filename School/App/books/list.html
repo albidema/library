@@ -15,8 +15,8 @@
                     <!--<td><a ui-sref="detail({id:row.id})">{{row.Address}}</a></td>-->
                     <td>
                         <button ui-sref="detail({id:row.id})" class="btn btn-info">View</button>
-                        <button ui-sref="edit({id:row.StudentId})" class="btn btn-default">Edit</button>
-                        <button ng-click="removeStudent(row.StudentId)" class="btn btn-danger">Delete</button>
+                        <button ui-sref="edit({id:row.id})" class="btn btn-default">Edit</button>
+                        <button ng-click="removeStudent(row.id)" class="btn btn-danger">Delete</button>
                     </td>
                 </tr>
             </tbody>
