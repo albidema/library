@@ -14,12 +14,3 @@
 
 }
 )();
-
-
-//app.controller("detailCtrl", function ($scope, $stateParams, APIservice) {
-
-
-//    $scope.dataDetail = APIservice.get({ id: $stateParams.id });
-
-
-//});

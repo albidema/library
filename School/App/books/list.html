@@ -6,6 +6,7 @@
                     <th>Name</th>
                     <th>Phone</th>
                     <th>Address</th>
+                    <th>&nbsp;&nbsp;</th>
                 </tr>
             </thead>
             <tbody>
@@ -13,9 +14,14 @@
                     <td><a ui-sref="detail({id:row.StudentId})">{{row.Name}}</a></td>
                     <td><a ui-sref="detail({id:row.StudentId})">{{row.Phone}}</a></td>
                     <td><a ui-sref="detail({id:row.StudentId})">{{row.Address}}</a></td>
+                    <td>
+                        <button ui-sref="detail({id:row.StudentId})" class="btn btn-info">View</button>
+                        <button ui-sref="edit({id:row.StudentId})" class="btn btn-default">Edit</button>
+                        <button ng-click="removeStudent(row.StudentId)" class="btn btn-danger">Delete</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
+        <h3><a ui-sref="add">Add new </a></h3>
     </div>
-    <!--<ui-view></ui-view>-->
 </div>

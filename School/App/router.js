@@ -22,6 +22,11 @@
                 url: "/edit/{id}",
                 templateUrl: "app/book/edit.html",
                 controller: "editCtrl"
+            })
+            .state("add", {
+                url: "/add",
+                templateUrl: "app/book/add.html",
+                controller: "addCtrl"
             });
             //.state("test", {
             //    url: "/test",

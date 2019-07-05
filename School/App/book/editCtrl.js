@@ -17,6 +17,11 @@
         });
     };
 
+        $scope.removeStudent = function (id) {
+            APIservice.delete({ id: id },  function () {
+                $state.go("home", {}, { reload: true });
+            });
+        }
 
     }
 

@@ -1,8 +1,11 @@
 ﻿(function () {
 
     angular.module("app")
-        .controller("listCtrl", function ($scope, APIservice) {
+        .controller("listCtrl", ['$scope', '$state','$stateParams', 'APIservice', ListController]);
 
+    function ListController($scope, $state, $stateParams, APIservice) {
+
+   
             APIservice.query(function (Data) {
                 $scope.dataList = Data;
             });
@@ -11,6 +14,14 @@
                 $location.path("/form/" + (id));
             };
 
-        });
+            $scope.removeStudent = function (id) {
+                APIservice.delete({ id: id }, function () {
+                    //window.location.reload(true);
+                    $state.reload();
+                });
+            };
+         
+
+        }
 
 })();
