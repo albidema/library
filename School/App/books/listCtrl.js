@@ -1,9 +1,9 @@
 ﻿(function () {
 
     angular.module("app")
-        .controller("listCtrl", ['$scope', '$state','$stateParams', 'APIservice', ListController]);
+        .controller("listCtrl", ['$scope', '$state','$stateParams', 'APIservice', 'toastr', ListController]);
 
-    function ListController($scope, $state, $stateParams, APIservice) {
+    function ListController($scope, $state, $stateParams, APIservice, toastr) {
 
    
             APIservice.query(function (Data) {
@@ -16,9 +16,14 @@
 
             $scope.removeStudent = function (id) {
                 APIservice.delete({ id: id }, function () {
-                    //window.location.reload(true);
-                    $state.reload();
-                });
+
+                    $state.reload().success(toastr.success('Success!', 'Book was succesfully deleted!'));
+                    
+                }, function () {
+                    
+                        toastr.error('Success!', 'Book was succesfully deleted!');
+                }
+                );
             };
          
 
