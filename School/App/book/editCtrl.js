@@ -4,11 +4,11 @@
 
     angular
         .module('app')
-        .controller('editCtrl', ['$scope', '$state', '$stateParams', 'APIservice', 'TagService', 'bookTagsService', EditController]);
+        .controller('editCtrl', ['$scope', '$state', '$stateParams', 'toastr', 'APIservice', 'tagService', 'bookTagsService', EditController]);
 
-    function EditController($scope, $state, $stateParams, APIservice, TagService, bookTagsService) {
+    function EditController($scope, $state, $stateParams, toastr, APIservice, tagService, bookTagsService) {
 
-        $scope.tags = TagService.get(); 
+        $scope.tags = tagService.get(); 
 
         $scope.someObject = {
             selectedTags: []
@@ -19,8 +19,7 @@
             $scope.someObject.selectedTags = bookTagsService.get({ id: $stateParams.id});
         }
            
-        $scope.submit = function (user) {
-            
+        $scope.submit = function (user) {           
             user.bookTag = [];
             for (var i = 0; i < $scope.someObject.selectedTags.length; i++) {
                 user.bookTag.push({ tagId: $scope.someObject.selectedTags[i].id, bookId: $stateParams.id});
@@ -33,8 +32,16 @@
 
         $scope.removeStudent = function (id) {
             APIservice.delete({ id: id }, function () {
+
                 $state.go("home", {}, { reload: true });
-            });
+
+                toastr.success('Success!', 'Book was succesfully deleted!');
+
+            }, function () {
+
+                toastr.error('Success!', 'Book was succesfully deleted!');
+            }
+            );
         };
 
     }

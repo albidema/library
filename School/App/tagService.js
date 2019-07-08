@@ -2,7 +2,7 @@
 (function () {
 
     angular.module("app")
-        .service("TagService", function ($resource) {
+        .service("tagService", function ($resource) {
 
             //var service = {
             //    getStudent: getStudent,

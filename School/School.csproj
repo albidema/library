@@ -193,7 +193,7 @@
     <Content Include="App\book\add.html" />
     <Content Include="App\book\addCtrl.js" />
     <Content Include="App\book\editCtrl.js" />
-    <Content Include="App\TagService.js" />
+    <Content Include="App\tagService.js" />
     <Content Include="Content\angular-toastr.css" />
     <Content Include="Content\angular-toastr.min.css" />
     <Content Include="Content\bootstrap.css" />

@@ -4,11 +4,11 @@
 
     angular
         .module('app')
-        .controller('addCtrl', ['$scope', '$state', '$stateParams', 'APIservice', 'TagService', AddController]);
+        .controller('addCtrl', ['$scope', '$state', '$stateParams', 'APIservice', 'tagService', AddController]);
 
-    function AddController($scope, $state, $stateParams, APIservice, TagService) {
+    function AddController($scope, $state, $stateParams, APIservice, tagService) {
 
-        $scope.tags = TagService.get();
+        $scope.tags = tagService.get();
 
         $scope.someObject = {
             selectedTags: []
