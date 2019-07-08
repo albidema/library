@@ -188,10 +188,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\books\listCtrl.js" />
+    <Content Include="App\bookTagsService.js" />
     <Content Include="App\book\detailCtrl.js" />
     <Content Include="App\book\add.html" />
     <Content Include="App\book\addCtrl.js" />
     <Content Include="App\book\editCtrl.js" />
+    <Content Include="App\TagService.js" />
     <Content Include="Content\angular-toastr.css" />
     <Content Include="Content\angular-toastr.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -219,7 +221,7 @@
     <Content Include="App\controller.js" />
     <Content Include="App\app.js" />
     <Content Include="App\router.js" />
-    <Content Include="App\service.js" />
+    <Content Include="App\book\bookService.js" />
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\angular.js" />

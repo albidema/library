@@ -1,13 +1,8 @@
-﻿//app.service("APIservice", function ($resource) {
-
-//    return $resource("/api/Students/:id", null, { "update": { method: "PUT" } });
-
-//});
-
+﻿
 (function () {
 
     angular.module("app")
-        .service("APIservice", function ($resource) {
+        .service("bookTagsService", function ($resource) {
 
             //var service = {
             //    getStudent: getStudent,
@@ -20,14 +15,14 @@
 
             //function getStudent() {
             //return $resource("/api/Students/:id", null, { "update": { method: "PUT" } });
-            return $resource("http://localhost:50115/api/books/:id", null, { "update": { method: "PUT" } });
+            return $resource("http://localhost:50115/api/booktags/:id", null, { 'get': { method: 'GET', isArray: true } });
 
-            
+
             //}
-            
+
 
         });
 
-    
+
 
 })();

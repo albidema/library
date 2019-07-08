@@ -4,14 +4,28 @@
 
     angular
         .module('app')
-        .controller('editCtrl', ['$scope', '$state', '$stateParams', 'APIservice', EditController]);
+        .controller('editCtrl', ['$scope', '$state', '$stateParams', 'APIservice', 'TagService', 'bookTagsService', EditController]);
 
-    function EditController($scope, $state, $stateParams, APIservice) {
+    function EditController($scope, $state, $stateParams, APIservice, TagService, bookTagsService) {
 
-        if ($stateParams.id)
-                $scope.user = APIservice.get({ id: $stateParams.id });
+        $scope.tags = TagService.get(); 
 
-    $scope.submit = function (user) {
+        $scope.someObject = {
+            selectedTags: []
+        };
+
+        if ($stateParams.id) {
+            $scope.user = APIservice.get({ id: $stateParams.id });
+            $scope.someObject.selectedTags = bookTagsService.get({ id: $stateParams.id});
+        }
+           
+        $scope.submit = function (user) {
+            
+            user.bookTag = [];
+            for (var i = 0; i < $scope.someObject.selectedTags.length; i++) {
+                user.bookTag.push({ tagId: $scope.someObject.selectedTags[i].id, bookId: $stateParams.id});
+            }
+
         APIservice.update({ id: $stateParams.id }, user, function () {
             $state.go("home", {}, { reload: true });
         });
@@ -22,22 +36,6 @@
                 $state.go("home", {}, { reload: true });
             });
         };
-
-
-        $scope.people = [
-            { name: 'Adam', email: 'adam@email.com', age: 12, country: 'United States' },
-            { name: 'Amalie', email: 'amalie@email.com', age: 12, country: 'Argentina' },
-            { name: 'Estefanía', email: 'estefania@email.com', age: 21, country: 'Argentina' },
-            { name: 'Adrian', email: 'adrian@email.com', age: 21, country: 'Ecuador' },
-            { name: 'Wladimir', email: 'wladimir@email.com', age: 30, country: 'Ecuador' },
-            { name: 'Samantha', email: 'samantha@email.com', age: 30, country: 'United States' },
-            { name: 'Nicole', email: 'nicole@email.com', age: 43, country: 'Colombia' },
-            { name: 'Natasha', email: 'natasha@email.com', age: 54, country: 'Ecuador' },
-            { name: 'Michael', email: 'michael@email.com', age: 15, country: 'Colombia' },
-            { name: 'Nicolás', email: 'nicolas@email.com', age: 43, country: 'Colombia' }
-        ];
-
-
 
     }
 

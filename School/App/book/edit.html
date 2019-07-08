@@ -9,27 +9,15 @@
         <label for="phone">Title</label>
         <input type="text" ng-model="user.title" class="form-control">
     </div>
-    <!--<div class="form-group">
-        <label for="address">Address</label>
-        <input type="text" ng-model="user.Address" class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="address">Comment</label>
-        <textarea  type="text" rows="5"   ng-model="user.Comment" class="form-control"></textarea>
-    </div>-->
 
-    <!--<h3>Array of objects (sorting enabled)</h3>
-    <ui-select multiple ng-model="ctrl.multipleDemo.selectedPeople" theme="bootstrap" ng-disabled="ctrl.disabled" sortable="true" close-on-select="false" style="width: 800px;">
-        <ui-select-match placeholder="Select person...">{{$item.name}} &lt;{{$item.email}}&gt;</ui-select-match>
-        <ui-select-choices repeat="person in ctrl.people | propsFilter: {name: $select.search, age: $select.search}">
+    <h3>Array of objects (sorting enabled)</h3>
+    <ui-select multiple ng-model="someObject.selectedTags" theme="bootstrap" ng-disabled="ctrl.disabled" sortable="true" close-on-select="false" style="width: 800px;">
+        <ui-select-match placeholder="Select person...">{{$item.name}}</ui-select-match>
+        <ui-select-choices repeat="person in tags ">
             <div ng-bind-html="person.name | highlight: $select.search"></div>
-            <small>
-                email: {{person.email}}
-                age: <span ng-bind-html="''+person.age | highlight: $select.search"></span>
-            </small>
         </ui-select-choices>
     </ui-select>
-    <p>Selected: {{ctrl.multipleDemo.selectedPeople}}</p>-->
+    <p>Selected: {{someObject.selectedTags}}</p>
 
     <div class="form-group">
         <button type="submit" class="btn btn-warning">Update</button>
