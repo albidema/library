@@ -15,7 +15,7 @@
 
             //function getStudent() {
             //return $resource("/api/Students/:id", null, { "update": { method: "PUT" } });
-            return $resource("http://localhost:50115/api/books/:id", null, { "update": { method: "PUT" } });
+            return $resource("http://localhost:50115/books/:id", null, { "update": { method: "PUT" } });
 
             
             //}

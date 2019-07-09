@@ -15,17 +15,17 @@
         };
 
         if ($stateParams.id) {
-            $scope.user = APIservice.get({ id: $stateParams.id });
+            $scope.book = APIservice.get({ id: $stateParams.id });
             $scope.someObject.selectedTags = bookTagsService.get({ id: $stateParams.id});
         }
            
-        $scope.submit = function (user) {           
-            user.bookTag = [];
+        $scope.submit = function (book) {           
+            book.bookTag = [];
             for (var i = 0; i < $scope.someObject.selectedTags.length; i++) {
-                user.bookTag.push({ tagId: $scope.someObject.selectedTags[i].id, bookId: $stateParams.id});
+                book.bookTag.push({ tagId: $scope.someObject.selectedTags[i].id, bookId: $stateParams.id});
             }
 
-        APIservice.update({ id: $stateParams.id }, user, function () {
+        APIservice.update({ id: $stateParams.id }, book, function () {
             $state.go("home", {}, { reload: true });
         });
     };

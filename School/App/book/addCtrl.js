@@ -4,9 +4,9 @@
 
     angular
         .module('app')
-        .controller('addCtrl', ['$scope', '$state', '$stateParams', 'APIservice', 'tagService', AddController]);
+        .controller('addCtrl', ['$scope', '$state', 'APIservice', 'tagService', AddController]);
 
-    function AddController($scope, $state, $stateParams, APIservice, tagService) {
+    function AddController($scope, $state, APIservice, tagService) {
 
         $scope.tags = tagService.get();
 
@@ -14,13 +14,13 @@
             selectedTags: []
         };
 
-        $scope.submit = function (user) {
-            user.bookTag = [];
+        $scope.submit = function (book) {
+            book.bookTag = [];
             for (var i = 0; i < $scope.someObject.selectedTags.length; i++) {
-                user.bookTag.push({ tagId: $scope.someObject.selectedTags[i].id });
+                book.bookTag.push({ tagId: $scope.someObject.selectedTags[i].id });
             }
 
-        APIservice.save(user, function () {
+        APIservice.save(book, function () {
             $state.go("home", {}, { reload: true });
         });
     };
