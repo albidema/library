@@ -10,15 +10,14 @@
         <input type="text" ng-model="book.title" class="form-control">
     </div>
 
-    <h3>Array of objects (sorting enabled)</h3>
+    <h3>Tags</h3>
     <ui-select multiple ng-model="someObject.selectedTags" theme="bootstrap" ng-disabled="ctrl.disabled" sortable="true" close-on-select="false" style="width: 800px;">
         <ui-select-match placeholder="Select person...">{{$item.name}}</ui-select-match>
         <ui-select-choices repeat="person in tags ">
             <div ng-bind-html="person.name | highlight: $select.search"></div>
         </ui-select-choices>
     </ui-select>
-    <p>Selected: {{someObject.selectedTags}}</p>
-
+   <br />
     <div class="form-group">
         <button type="submit" class="btn btn-warning">Update</button>
         <button type="button" ng-click="removeStudent(book.id)" class="btn btn-danger">Delete</button>

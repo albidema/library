@@ -176,8 +176,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -187,13 +185,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App\books\listCtrl.js" />
-    <Content Include="App\bookTagsService.js" />
+    <Content Include="App\book\listCtrl.js" />
+    <Content Include="App\bookTags\bookTagsService.js" />
     <Content Include="App\book\detailCtrl.js" />
     <Content Include="App\book\add.html" />
     <Content Include="App\book\addCtrl.js" />
     <Content Include="App\book\editCtrl.js" />
-    <Content Include="App\tagService.js" />
+    <Content Include="App\tag\tagService.js" />
     <Content Include="Content\angular-toastr.css" />
     <Content Include="Content\angular-toastr.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -206,7 +204,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="App\book\edit.html" />
     <Content Include="App\book\detail.html" />
-    <Content Include="App\books\list.html" />
+    <Content Include="App\book\list.html" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
@@ -218,7 +216,6 @@
     <Content Include="Scripts\angular-toastr.min.js" />
     <Content Include="Scripts\angular-toastr.tpls.js" />
     <Content Include="Scripts\angular-toastr.tpls.min.js" />
-    <Content Include="App\controller.js" />
     <Content Include="App\app.js" />
     <Content Include="App\router.js" />
     <Content Include="App\book\bookService.js" />
@@ -264,7 +261,6 @@
     <Content Include="Scripts\select.min.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App\student\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

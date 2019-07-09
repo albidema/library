@@ -10,7 +10,7 @@
 
             .state("home", {
                 url: "/",
-                templateUrl: "app/books/list.html",
+                templateUrl: "app/book/list.html",
                 controller: "listCtrl"
             })
             .state("detail", {
@@ -28,46 +28,8 @@
                 templateUrl: "app/book/add.html",
                 controller: "addCtrl"
             });
-            //.state("test", {
-            //    url: "/test",
-            //    templateUrl: "/ngView/test.html",
-            //    controller: "testCtrl"
-            //});
-
-
-
+            
     });
 
 })();
 
-//app.config(function ($stateProvider, $urlRouterProvider) {
-
-//    // For any unmatched url, redirect to /list
-//    $urlRouterProvider.otherwise("/");
-
-//    $stateProvider
-
-//        .state("home", {
-//            url: "/",
-//            templateUrl: "/ngView/list.html",
-//            controller: "listCtrl"
-//        })
-//        .state("detail", {
-//            url: "/detail/{id}",
-//            templateUrl: "/ngView/detail.html",
-//            controller: "detailCtrl"
-//        })
-//        .state("form", {
-//            url: "/form",
-//            templateUrl: "/ngView/form.html",
-//            controller: "formCtrl"
-//        })
-//            .state("test", {
-//                url: "/test",
-//                templateUrl: "/ngView/test.html",
-//                controller: "testCtrl"
-//            });
-
-
-
-//});

@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "School";
+    ViewBag.Title = "Books";
 }
 
 <ui-view></ui-view>
@@ -15,16 +15,14 @@
     <script src="~/Scripts/select.min.js"></script>
     @Scripts.Render("~/App/app.js")
     @Scripts.Render("~/App/router.js")
-    @Scripts.Render("~/App/books/listCtrl.js")
+
+    @Scripts.Render("~/App/book/listCtrl.js")
     @Scripts.Render("~/App/book/detailCtrl.js")
     @Scripts.Render("~/App/book/editCtrl.js")
     @Scripts.Render("~/App/book/addCtrl.js")
+
     @Scripts.Render("~/App/book/bookService.js")
-    @Scripts.Render("~/App/tagService.js")
-    @Scripts.Render("~/App/bookTagsService.js")
-
-
-
-
+    @Scripts.Render("~/App/tag/tagService.js")
+    @Scripts.Render("~/App/bookTags/bookTagsService.js")
 
 }
